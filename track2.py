@@ -87,7 +87,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.7, mi
                 
                 is_over_delete_button = intersects_rectangle(0, 0, 250, 80, x_index, y_index)
 
-                if finger_distance <= 80:
+                if finger_distance <= 60:
                     print(is_over_delete_button)
                     if not is_over_delete_button:
                         blank_image[y_index-10:y_index+10,x_index-10:x_index+10] = np.array([0,0,0])
